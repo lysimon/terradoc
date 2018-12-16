@@ -18,6 +18,6 @@ class TestStorage(unittest.TestCase):
             storage.get_configuration("file")
 
 
-    def test_get_configuration__correct_type_value_no_file__raise_value_erro2r(self):
+    def test_get_configuration__correct_type_value_no_file__raise_value_erro22r(self):
         with self.assertRaises(ValueError):
             storage.get_configuration("file")
