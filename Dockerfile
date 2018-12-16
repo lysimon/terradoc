@@ -1,5 +1,9 @@
 FROM python:3.7-alpine
 
+# Install requirements
+COPY requirements.txt requirements.txt
+RUN pip3 install -r requirements.txt
+
 # Copy all relevant configuration
 COPY main.py .
 COPY configuration configuration

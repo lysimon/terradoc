@@ -18,6 +18,10 @@ class TestStorage(unittest.TestCase):
             storage.get_configuration("file")
 
 
-    def test_get_configuration__correct_type_value_no_file__raise_value_erro22r(self):
+    def test_get_configuration_from_file__wrong_file__raise_value_error(self):
         with self.assertRaises(ValueError):
-            storage.get_configuration("file")
+            storage.get_configuration_from_file("")
+        with self.assertRaises(ValueError):
+            storage.get_configuration_from_file("somewrongfile.yml")
+        with self.assertRaises(ValueError):
+            storage.get_configuration_from_file("data/not_yaml.yml")
