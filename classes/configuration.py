@@ -22,7 +22,6 @@ class Configuration(object):
     def set_configuration_from_environment(self):
         # Get all environment variables
         environment_variable_names = os.environ
-        print(environment_variable_names)
         path_name = "TERRADOC_NAME"
         path_prefix = "TERRADOC_PATH"
         recursive_prefix = "TERRADOC_RECURSIVE"

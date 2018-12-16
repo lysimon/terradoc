@@ -1,3 +1,5 @@
+import logging
+
 class Location:
     def __init__(self, name=None, path=None, recursive=True):
         if name is None or name == "":
@@ -8,6 +10,7 @@ class Location:
         self.name = name
         self.path = path
         self.recursive = recursive
+        logging.info("Location(name={0}, path={1}, recursive={2}".format(name, path, recursive))
 
     def get_output(self):
         """

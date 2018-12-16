@@ -26,10 +26,10 @@ class TestStorage(unittest.TestCase):
         os.environ["TERRADOC_NAME"] = "toto"
         os.environ["TERRADOC_PATH"] = "/data/myfiles"
         conf = configuration.Configuration("environment")
-        self.assertEquals(1, len(conf.locations))
-        self.assertEquals("toto", conf.locations[0].name)
-        self.assertEquals("/data/myfiles", conf.locations[0].path)
-        self.assertEquals(True, conf.locations[0].recursive)
+        self.assertEqual(1, len(conf.locations))
+        self.assertEqual("toto", conf.locations[0].name)
+        self.assertEqual("/data/myfiles", conf.locations[0].path)
+        self.assertEqual(True, conf.locations[0].recursive)
 
     def test_set_configuration_from_file__wrong_file__raise_value_error(self):
         with self.assertRaises(ValueError):
