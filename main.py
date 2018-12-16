@@ -19,4 +19,4 @@ else:
 
 logging.info("Starting Terradoc")
 
-# Step 1, read all the configuration
+# Step 1, read all the lib

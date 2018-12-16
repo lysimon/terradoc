@@ -1,5 +1,5 @@
 import unittest
-from configuration import configuration
+from lib import configuration
 
 
 class TestStorage(unittest.TestCase):

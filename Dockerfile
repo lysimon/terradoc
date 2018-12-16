@@ -4,10 +4,9 @@ FROM python:3.7-alpine
 COPY requirements.txt requirements.txt
 RUN pip3 install -r requirements.txt
 
-# Copy all relevant configuration
+# Copy all relevant lib
 COPY main.py .
-COPY configuration configuration
-COPY storage storage
+COPY lib lib
 
 # Copy unittests and run them
 COPY test test
