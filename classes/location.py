@@ -12,7 +12,7 @@ class Location:
         self.recursive = recursive
         logging.info("Location(name={0}, path={1}, recursive={2}".format(name, path, recursive))
 
-    def get_output(self):
+    def get_outputs(self):
         """
 
         :return: The markdown of all the tf file parsed by it, either one of them, or all of them if recursive was true

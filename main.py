@@ -1,5 +1,6 @@
 import os
 import logging
+from classes import configuration
 
 LOG_LEVEL = os.getenv("LOG_LEVEL")
 if LOG_LEVEL == "DEBUG":
@@ -20,3 +21,8 @@ else:
 logging.info("Starting Terradoc")
 
 # Step 1, read all the classes
+logging.info("Step 1: Initializing configuration")
+conf = configuration.Configuration(os.environ.get("CONFIGURATION_TYPE"), os.environ.get("FILE_PATH"))
+logging.info("Step 2: Fetching output files")
+outputs = conf.get_outputs()
+# Generate all the output

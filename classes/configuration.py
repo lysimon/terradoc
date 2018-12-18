@@ -57,3 +57,8 @@ class Configuration(object):
                 raise ValueError("Unable to parse file {0} as yaml".format(configuration_file_path))
 
         raise ValueError("file classes is not implemented yet")
+
+    def get_outputs(self):
+        outputs = []
+        for location in self.locations:
+            outputs.extends(location.get_outputs())
